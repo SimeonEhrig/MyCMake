@@ -1,0 +1,9 @@
+# version 3.2 is feature complete for modern CMake
+cmake_minimum_required(VERSION 3.2)
+
+set(includeVar inc)
+message("CMAKE_CURRENT_SOURCE_DIR = ${CMAKE_CURRENT_SOURCE_DIR}")
+message("CMAKE_CURRENT_BINARY_DIR = ${CMAKE_CURRENT_BINARY_DIR}")
+message("CMAKE_CURRENT_LIST_DIR = ${CMAKE_CURRENT_LIST_DIR}")
+message("CMAKE_CURRENT_LIST_FILE = ${CMAKE_CURRENT_LIST_FILE}")
+message("CMAKE_CURRENT_LIST_LINE = ${CMAKE_CURRENT_LIST_LINE}")
