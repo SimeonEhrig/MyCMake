@@ -24,16 +24,7 @@ def main():
     ############################################################################
     # install clang/llvm
     ############################################################################
-    # add ppa for modern clang/llvm versions
-    stage0 += shell(commands=['wget http://llvm.org/apt/llvm-snapshot.gpg.key',
-	                      'apt-key add llvm-snapshot.gpg.key',
-	                      'rm llvm-snapshot.gpg.key',
-	                      'echo "" >> /etc/apt/sources.list',
-	                      'echo "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-9' +
-                              ' main" >> /etc/apt/sources.list',
-	                      'echo "deb-src http://apt.llvm.org/xenial/ llvm-toolchain-xenial-9' +
-                              ' main" >> /etc/apt/sources.list'])
-    stage0 += llvm(version='9')
+    stage0 += llvm(version='9', extra_repository=True)
 
     ############################################################################
     # install ninja build system
