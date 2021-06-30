@@ -1,6 +1,7 @@
 # singularity container images
 *.sif
 
-# add empty build folder to the repository
-*/build/*
+# add empty build and install folder to the repository
+build/
+install/
 !.gitkeep
